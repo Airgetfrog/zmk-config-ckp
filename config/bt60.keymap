@@ -8,9 +8,9 @@
 #define RAISE   1
 #define CONFIG   2
 
-#define RGB0 RGB_COLOR_HSB_VAL(300,100,50)
-#define RGB1 RGB_COLOR_HSB_VAL(128,100,100)
-#define RGB2 RGB_COLOR_HSB_VAL(0,100,50)
+#define RGB0 RGB_COLOR_HSB_VAL(280,100,50)
+#define RGB1 RGB_COLOR_HSB_VAL(190,100,50)
+#define RGB2 RGB_COLOR_HSB_VAL(340,100,50)
 
 / {
     behaviors {
