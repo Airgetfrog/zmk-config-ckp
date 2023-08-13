@@ -34,7 +34,7 @@
         };
 
         ht_esc: hold_tap_escape {
-            compatible = "zmk,behavior-hold_tap";
+            compatible = "zmk,behavior-hold-tap";
             label = "hold_tap_escape";
             #binding-cells = <2>;
             flavor = "hold-preferred";
