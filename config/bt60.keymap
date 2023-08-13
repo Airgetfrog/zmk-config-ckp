@@ -40,10 +40,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &mo RAISE>
+                = <&macro_tap &to RAISE>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB_CMD RGB1>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo RAISE>
+                , <&macro_tap &to DEFAULT>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB_CMD RGB0>;
         };
 
