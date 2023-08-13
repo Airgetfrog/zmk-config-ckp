@@ -46,6 +46,17 @@
                 , <&macro_release &mo RAISE>
                 , <&macro_tap &rgb_ug RGB0>;
         };
+
+        to_rgb: to_RGB {
+            label = "to_RGB";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &to MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_tap &rgb_ug MACRO_PLACEHOLDER>
+        };
     };
 
     keymap {
@@ -65,7 +76,7 @@
                 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT   &kp BSLH
                 &lt_rgb 0 CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp  K    &kp  L  &kp SEMI &kp SQT            &kp RET
                 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH                   &tui LSHIFT UP
-                &kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &to RAISE  &kp LEFT &kp DOWN    &kp RIGHT
+                &kp LCTRL &kp LGUI &kp LALT            &kp SPACE                          &to_rgb RAISE RGB1  &kp LEFT &kp DOWN    &kp RIGHT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -75,7 +86,7 @@
                 &trans &trans &trans &trans &trans &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &trans
                 &trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans   &trans
                 &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &trans &trans &trans &trans &trans &trans  &tui LSHIFT PG_UP
-                &trans &kp R  &trans              &trans                            &to CONFIG   &kp HOME   &kp PG_DN &kp END
+                &trans &kp R  &trans              &trans                            &to_rgb CONFIG RGB2   &kp HOME   &kp PG_DN &kp END
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -85,7 +96,7 @@
                 &rgb_ug RGB_TOG &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &sys_reset
                 &bl BL_TOG    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans   &bootloader
                 &bt BT_PRV &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &bt BT_NXT
-                &trans &kp C  &trans              &trans                            &to DEFAULT   &trans   &trans &trans
+                &trans &kp C  &trans              &trans                            &to_rgb DEFAULT RGB0   &trans   &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
