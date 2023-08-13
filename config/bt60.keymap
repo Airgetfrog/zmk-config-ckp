@@ -55,7 +55,7 @@
                 = <&macro_param_1to1>
                 , <&macro_tap &to MACRO_PLACEHOLDER>
                 , <&macro_param_2to1>
-                , <&macro_tap &rgb_ug MACRO_PLACEHOLDER>
+                , <&macro_tap &rgb_ug MACRO_PLACEHOLDER>;
         };
     };
 
