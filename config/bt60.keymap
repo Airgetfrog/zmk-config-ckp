@@ -8,10 +8,6 @@
 #define RAISE   1
 #define CONFIG   2
 
-#define RGB0 300,100,50
-#define RGB1 128,100,100
-#define RGB2 0,100,50
-
 / {
     behaviors {
         tui: tap_unless_interrupted {
@@ -39,19 +35,19 @@
             label = "rgb_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(RGB0)>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
         }
         rgb1: rgb_1 {
             label = "rgb_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(RGB1)>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>;
         }
         rgb2: rgb_2 {
             label = "rgb_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(RGB2)>;
+            bindings = <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,50)>;
         }
 
         r_rgb: raise_RGB {
